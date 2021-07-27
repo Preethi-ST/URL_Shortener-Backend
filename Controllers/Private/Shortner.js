@@ -26,7 +26,7 @@ exports.Shortner = async (req,res,next) => {
                         url
                     })
                 }
-                url = new Url({longURL,shortUrl : `${process.env.baseURL}/${shortUrl}`,shortcode : shortUrl ,date : new Date('2020-07-25') })
+                url = new Url({longURL,shortUrl : `${process.env.baseURL}/${shortUrl}`,shortcode : shortUrl})
                 await url.save()
 
                 return res.status(200).json({
